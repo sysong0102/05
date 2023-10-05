@@ -5,14 +5,18 @@
 
 int main(int argc, char *argv[]) 
 {
-	int a;
-	printf("input an integer : ");
-	scanf("%d", &a);
+	char c;
+	int num = 0;
 	
-	if (a < 0)
-		a = -a;
-		
-	printf("The absolute value is %d\n", a);
+	printf("input a string : ");
+	
+	while ( (c = getchar() ) != '\n')
+	{
+		if ( c >= '0' && c <= '9')
+		num = num + 1;
+	}
+
+	printf("no, of digits is %i\n", num);
 	
 	system ("PAUSE");
 	return 0;
